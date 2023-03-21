@@ -24,6 +24,14 @@ class Cor(models.Model):
 
     def __str__(self):
         return f"{self.descricao} ({self.id})"
+
+class Modelo(models.Model):
+    descricao = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return f"{self.descricao} ({self.id})"
+
+
     
 class Veículo(models.Model):
     descricao = models.CharField(max_length=100)
@@ -32,7 +40,7 @@ class Veículo(models.Model):
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
     ano = models.IntegerField(null=True, default=0)
     preco = models.DecimalField(max_digits=10, decimal_places=2, null=True, default=0)
-    modelo = models.CharField(max_length=100)
+    modelo = models.ForeignKey(Modelo, on_delete=models.PROTECT, related_name="veiculos")
 
     def __str__(self):
-            return f"{self.marca} {self.modelo} ({self.ano}), cor: {self.cor}"
+            return f"{self.marca} {self.modelo} ({self.ano}), {self.cor}"
