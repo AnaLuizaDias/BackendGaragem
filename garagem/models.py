@@ -36,7 +36,7 @@ class Modelo(models.Model):
 
 
     
-class Veículo(models.Model):
+class Veiculo(models.Model):
     descricao = models.CharField(max_length=100)
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="veiculos")
     categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="veiculos")
