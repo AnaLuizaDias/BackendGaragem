@@ -1,9 +1,13 @@
 from rest_framework.viewsets import ModelViewSet
-# from rest_framework.permissions import IsAuthenticated
 
 from garagem.models import Veiculo
-from garagem.serializers import VeiculoSerializer, VeiculoDetailSerializer, VeiculoListSerializer
+from garagem.serializers import (
+    VeiculoDetailSerializer,
+    VeiculoListSerializer,
+    VeiculoSerializer,
+)
 
+# from rest_framework.permissions import IsAuthenticated
 
 
 class VeiculoViewSet(ModelViewSet):

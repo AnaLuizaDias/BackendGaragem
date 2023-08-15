@@ -1,6 +1,8 @@
 from django.db import models
+
 from garagem.models import Acessorio, Categoria, Cor, Marca, Modelo
 from uploader.models import Image
+
 
 class Veiculo(models.Model):
     descricao = models.CharField(max_length=100)
@@ -19,6 +21,6 @@ class Veiculo(models.Model):
         blank=True,
         default=None,
     )
+
     def __str__(self):
-            return f"{self.marca} {self.modelo} ({self.ano}), {self.cor}"
-    
+        return f"{self.marca} {self.modelo} ({self.ano}), {self.cor}"
