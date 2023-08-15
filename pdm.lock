@@ -242,7 +242,7 @@ summary = "Implementation of RFC 6570 URI Templates"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default", "dev"]
-content_hash = "sha256:b9c8de9030e320964f6384f9c63502af5bd43bf2f0f4364a556cdc08de524039"
+content_hash = "sha256:4d9ca6ee89d8b748f0e16ce42aa9720cf8c437217204e25d311766744c0c79c8"
 
 [metadata.files]
 "asgiref 3.7.2" = [
